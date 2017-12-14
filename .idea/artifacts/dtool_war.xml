@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dtool:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="dtool.war">
+      <element id="artifact" artifact-name="dtool:war exploded" />
+    </root>
+  </artifact>
+</component>
