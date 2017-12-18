@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<package name="com.cimen.ways.dtool.vo"/>
+		<package name="cn.xym.dtool.vo"/>
 	</typeAliases>
 	<mappers>
 	   <!-- 注册userMapper.xml文件-->

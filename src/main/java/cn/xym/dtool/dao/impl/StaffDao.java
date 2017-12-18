@@ -15,12 +15,12 @@ public class StaffDao extends SqlSessionDaoSupport implements IStaffDao {
 
     @Override
     public Staff getStaffByName(String username) {
-        return (Staff)(getSqlSession().selectOne("com.cimen.ways.dtool.dao.IStaffDao.getStaffByName",username));
+        return (Staff)(getSqlSession().selectOne("cn.xym.dtool.dao.IStaffDao.getStaffByName",username));
     }
 
     @Override
     public int updateStaffMac(Staff staff) {
-        return getSqlSession().update("com.cimen.ways.dtool.dao.IStaffDao.updateStaffMac",staff);
+        return getSqlSession().update("cn.xym.dtool.dao.IStaffDao.updateStaffMac",staff);
     }
 
 
