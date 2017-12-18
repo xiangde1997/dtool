@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cimen.ways.dtool.dao.IStaffDao" >
+    <select id="getStaffByName" parameterType="java.lang.String" resultType="Staff" >
+      select staff_id 'staffid',staff_name 'staffname',login_name 'loginname',login_pwd 'loginpwd' from dba_staff where login_name=#{_parameter}
+    </select>
+
+    <update id="updateStaffMac" parameterType="Staff" >
+        update dba_staff set last_mac =#{lastmac} where staff_id=#{staffid}
+    </update>
+</mapper>
