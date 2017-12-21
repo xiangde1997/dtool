@@ -22,6 +22,9 @@
         http://www.springframework.org/schema/jee/spring-jee.xsd
         "
 >
+    <!--启用spring的一些annotation -->
+    <context:annotation-config/>
+
     <!-- 自动扫描 -->
     <context:component-scan base-package="cn.xym.dtool">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>

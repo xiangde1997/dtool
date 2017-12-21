@@ -7,15 +7,20 @@
         http://www.springframework.org/schema/context   
         http://www.springframework.org/schema/context/spring-context-3.0.xsd  
         http://www.springframework.org/schema/mvc  
-        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">  
-    <mvc:annotation-driven/>
-    <mvc:default-servlet-handler/>
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <mvc:annotation-driven />
+
+    <!--静态资源映射-->
+    <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
+
+    <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
     <context:component-scan base-package="cn.xym.dtool.controller">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>   
 	</context:component-scan>
-    <bean id="viewResolver"  
-        class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
-        <property name="prefix" value="/WEB-INF/view/" />  
-        <property name="suffix" value=".jsp" />  
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/" />
+        <property name="suffix" value=".jsp" />
     </bean>
 </beans>
